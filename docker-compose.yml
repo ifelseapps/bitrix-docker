@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: bitrix_nginx
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/
+      - ./docker/nginx/:/etc/nginx/conf.d/
